@@ -1,4 +1,4 @@
-var slideIndex = 0;
+/*var slideIndex = 0;
 showSlides();
 
 function showSlides() {
@@ -11,30 +11,89 @@ function showSlides() {
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 13000); // Change image every 13 seconds
-}
+}*/
 
-$(function() {
-	var static = $(".navbar-static-top");
+
+/*$(function() {  });*/
+/*
+
+	var fixed = $(".navbar-static-top");
 	$(window).scroll(function(){
 	var scroll = $(window).scrollTop();
 
     if (scroll >= 40) {
-        static.removeClass("navbar-static-top").addClass("navbar-fixed-top");
-        console.log("done");
+        fixed.removeClass("navbar-static-top").addClass("navbar-fixed-top");
+        square.css('top', '0');
+
     } else {
-        static.removeClass("navbar-fixed-top").addClass("navbar-static-top");
-    }	
+        fixed.removeClass("navbar-fixed-top").addClass("navbar-static-top");
+    }
   });
+*/
+var TopNav = $('.TopNav'),
+    square = $('.square');
+
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if(scroll > 0){
+        console.log(546);
+        TopNav.removeClass('navbar-static-top').addClass('navbar-fixed-top');
+        square.removeClass('menu-static-top').addClass('menu-fixed-top');
+    } else {
+        TopNav.removeClass('navbar-fixed-top').addClass('navbar-static-top');
+        square.removeClass('menu-fixed-top').addClass('menu-static-top');
+    }
 });
 
 
-/*document.getElementsByClassName('uncheck').onclick = changeColor;   
 
-    function changeColor() {
-        document.body.style.color = "#71bf44";
-    }   
-*/
-var uncheck = $(".uncheck")
+
+var uncheck = $(".uncheck");
 uncheck.click(function a(){
 	$(this).toggleClass("check");
 });
+
+
+
+
+
+$(document).ready(function(){
+    var owl= $(".owl-carousel"),
+        url = null,
+        prev = $(".arrowleft"),
+        next = $(".arrowright");
+
+
+    owl.owlCarousel({
+        loop: true,
+        items: 1,
+        center: true,
+        touchDrag: true
+    });
+
+    next.on("click", function(){
+        owl.trigger("next.owl.carousel")
+    });
+    prev.on("click", function(){
+            owl.trigger("prev.owl.carousel")
+        });
+    });
+
+    var burgerBar = $(".burgerbar");
+    var close = $(".closeMenu");
+
+    burgerBar.click(function () {
+        square.css('display', 'block');
+        square.addClass('mainMenu');
+        $('.TopNav').css('display', 'none');
+    });
+
+    close.click(function (){
+        square.css('display', 'none');
+        square.removeClass('mainMenu');
+        $('.TopNav').css('display', 'block');
+    });
+
+
+
+

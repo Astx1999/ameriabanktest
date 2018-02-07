@@ -9,7 +9,10 @@
       <script src="https://use.fontawesome.com/6482126565.js"></script>
     <title>Ameriabank - Գլխավոր էջ</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css" />
 
   </head>
@@ -28,9 +31,6 @@
           <div class="right">
 
            <div class="icons">
-              <!--<a href="http://www.facebook.com/Ameriabank" target="_blank" class="facebook"><img src="image/facebook.PNG"></a>
-              <a href="http://www.linkedin.com/company/ameriabank-cjsc" target="_blank" class="linkedin"><img src="image/in.PNG"></a>
-              <a href="http://www.youtube.com/user/AmeriabankCJSC" target="_blank" class="youtube"><img src="image/youtube.PNG"></a>-->
                <a href="http://www.facebook.com/Ameriabank" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                <a href="http://www.linkedin.com/company/ameriabank-cjsc" target="_blank" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                <a href="http://www.youtube.com/user/AmeriabankCJSC" target="_blank" class="youtube"><i class="fa fa-youtube-play " aria-hidden="true"></i></a>
@@ -52,11 +52,6 @@
              </tr>
            </table>
 
-           <!-- <div class="last">
-              <div class="search"><img src="image/search.PNG"></div>
-              <div class="location"><img src="image/loc.PNG"></div>              
-           </div> -->
-
           </div>
 
         </div> 
@@ -67,14 +62,53 @@
 
     <!-- navbar -->
     <div class="main_panel container content">
+
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="square menu-static-top " id="main_menu_content">
+                <div class="closeMenu">&#215;</div>
+                <div class="col-xs-12 col-sm-6 col-md-4 shortMenu">
+                    <ul>
+                        <li>Բանկի մասին</li>
+                        <li>Սպասարկման ցանց</li>
+                        <li>Հաշվետվություններ</li>
+                        <li>Բանկի ծառայությունները</li>
+                        <li>Բաժնետերեր եվ ներդրողներ</li>
+                        <li>Մամուլի կենտրոն</li>
+                        <li>Կարգավորում</li>
+                        <li>Աշխատանքն Ամերիաբանկում</li>
+                        <li>Հաճախորդի իրավունքներ</li>
+                        <li>Ֆինանսական համակարգի հաշտարար</li>
+                        <li>Հետադարձ կապ</li>
+                        <li>Բանկի կողմից օտարվող գույք</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 shortMenu">
+                    <p> Ֆիզիկական անձ հաճախորդներին </p>
+                    <ul>
+                        <li>Բանկային ծառայությունների <br> մատուցման հիմնական պայմաններ</li>
+                        <li>ՍՎարկային գիծ եվ օվերդրաֆտ</li>
+                        <li>Սպառողական վարկեր</li>
+                        <li>Քարտեր</li>
+                        <li>Ավանդներ</li>
+                        <li>Հաշիվների բացում եվ սպասարկում</li>
+                        <li>Ամերիա Պրեմիում</li>
+                        <li>Ամերիա Փարթներ</li>
+                        <li>Ամերիա Պերսոնա</li>
+                        <li>Հատուկ պայմաններ տնտեսության<br>մի շարք ոլորտների աշխատակիցների<br>համար </li>
+                        <li>Հետադարձ կապ</li>
+
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 shortMenu">
+
+                </div>
+            </div>
 
         <td align="left">
 
             <div class="container TopNav navbar-static-top">
                 <div class="row">
-                    <div class="col-sm-12 col-md-5">
+                    <div class="col-sm-12 col-md-5 navimg">
                         <img class="upperlogo" src="image/logo2.png" alt="">
                     </div>
                     <div class="col-sm-12 col-md-7 navbox">
@@ -154,17 +188,17 @@
     <!-- row -->
         <div class="containerrows">
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="col-xs-12 col-sm-4 col-md-4 containerrowsleft">
                     <div class="grad1">
                         <a class="top_button">Ֆիզիկական անձ հաճախորդներին</a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="col-xs-12 col-sm-4 col-md-4 containerrowsmiddle">
                     <div class="grad2">
                         <a class="top_button">Կորպորատիվ հաճախորդներին</a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="col-xs-12 col-sm-4 col-md-4 containerrowsright">
                     <div class="grad3">
                         <a class="top_button"><p>
                             Ներդրումային&nbsp;</p>
@@ -180,31 +214,41 @@
 
 
         <!-- Slideshow container -->
-        <div class="slideshow-container">
+        <div class="slider">
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img src="image/Kochar_branch_arm.gif" style="width:100%">
+            <div class="slider-holder">
+
+                <div class="owl-carousel">
+
+                    <div class="mySlides">
+                        <img src="image/Kochar_branch_arm.gif" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="image/mortgage_home_arm.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="image/sector_emploee_arm.gif" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="image/Toyota_Ameriabank.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="image/SMEbanner_arm.gif" style="width:100%">
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="arrowleft"><img src="image/arrowleft.png" alt="" style="width: 60px" ></div>
+                    <div class="arrowright"><img src="image/arrowright.png" alt="" style="width: 60px"></div>
+                </div>
+
             </div>
-
-            <div class="mySlides fade">
-                <img src="image/mortgage_home_arm.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="image/sector_emploee_arm.gif" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="image/Toyota_Ameriabank.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="image/SMEbanner_arm.gif" style="width:100%">
-            </div>
-
-    </div>
-        <!-- Slideshow container -->
+        </div>
+        <!--Slideshow container-->
 
     <!-- Services row --><div class="Services row">
 
@@ -323,15 +367,83 @@
   </div>
     </div>
  </div>
-    <!-- news --><div class="news clearfix">
+    <!-- news --><div class="news clearfix container">
           <div>
               <div class="greenblock">
                   <div></div>
                   <p>ՆՈՐՈՒԹՅՈՒՆՆԵՐ</p>
               </div>
           </div>
-
-              <table>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="date">
+                    <span>10</span>
+                </div>
+                <div class="mount">
+                    <span>/01</span>
+                </div>
+                <div class="NewsText">
+                    <span>Հայտարարություն (AMAMRBB26ER2)</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="date">
+                    <span>28</span>
+                </div>
+                <div class="mount">
+                    <span>/12</span>
+                </div>
+                <div class="NewsText">
+                    <span>Հայտարարություն տոն օրերի աշխատանքային ժամերի մասի</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="date">
+                    <span>25</span>
+                </div>
+                <div class="mount">
+                    <span>/12</span>
+                </div>
+                <div class="NewsText">
+                    <span>Beeline-Ամերիաբանկ` առցանց գործարքների նոր առաջարկ</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="date">
+                    <span>09</span>
+                </div>
+                <div class="mount">
+                    <span>/01</span>
+                </div>
+                <div class="NewsText">
+                    <span>Հայտարարություն (AMAMRBB28ER8)</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="date">
+                    <span>25</span>
+                </div>
+                <div class="mount">
+                    <span>/12</span>
+                </div>
+                <div class="NewsText">
+                    <span>Beeline-ն Ամերիաբանկի հետ համատեղ գործարկել է առցանց վճարումների pay.beeline.am հարթակը</span>
+            </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="date">
+                <span>22</span>
+                </div>
+                <div class="mount">
+                    <span>/12</span>
+                </div>
+                <div class="NewsText">
+                    <span>Ամերիաբանկ- gg համատեղ արշավ</span></div>
+            </div>
+        </div>
+              <!--<table>
                   <tr>
                       <td>
                           <div class="date">
@@ -400,7 +512,7 @@
                               <span>Ամերիաբանկ- gg համատեղ արշավ</span>
                       </td>
                   </tr>
-              </table>
+              </table>-->
 
           <div class="nbtn">
               <img src="image\newsarchive.jpg" alt="">
@@ -432,7 +544,7 @@
                 <li><a href=""><p>Տեղեկատվական անվտանգության<br>խորհուրդներ</p></a></li>
             </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 secondlist">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 secondlist">
                 <ul>
                     <li><h5>ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</h5></li>
                     <li><a href=""><p>Կորպորատիվ հաճախորդներին</p></a></li>
@@ -441,7 +553,7 @@
                     <li><div class="help"><a href=""><img src="image/Child_arm_ text.png" alt=""><p>Միասին Կարող ենք օգնել...</p></a></div></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 thirdlist">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 thirdlist">
                 <ul>
                   <li><h5>ՄԵՐ ՄԱՍԻՆ</h5></li>
                   <li><a href=""><p>Բանկի մասին</p></a></li>
@@ -451,7 +563,7 @@
                   <li><a href=""><p>Մամուլի կենտրոն</p></a></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 fourthlist">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 fourthlist">
               <ul>
                 <li><h5> ԳԼԽԱՄԱՍԱՅԻՆ ԳՐԱՍԵՆՅԱԿ</h5></li>
                 <li class="contacts">
@@ -491,20 +603,13 @@
         </div>
         </div>
             <div class="col-xs-12 col-sm-2 col-md-4 col-lg-4 copyright"><p>© 2007-2017. All rights reserved.</p></div>
-            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 conmap"><a href="">Հետադարձ կապ</a> <a href="">Կայքի քարտեզ</a></div>
+            <div class="col-xs-12 col-sm-10 col-md-4 col-lg-4 conmap"><a href="">Հետադարձ կապ</a> <a href="">Կայքի քարտեզ</a></div>
             <img class="amerialogo" src="image/GroupLogo.png" alt="">
-
    </div>
 
         </div>
-
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/js.js"></script>
 

@@ -5,10 +5,13 @@
 	font-weight: normal;
 	font-style: normal;
 }
+* {
+	box-sizing:border-box
+}
 .content{
-	-webkit-box-shadow: 0px 0px 14px -6px rgba(147,147,150,1);
-	-moz-box-shadow: 0px 0px 14px -6px rgba(147,147,150,1);
-	box-shadow: 0px 0px 14px -6px rgba(147,147,150,1);
+	-webkit-box-shadow: 0 0 14px -6px rgba(147,147,150,1);
+	-moz-box-shadow: 0 0 14px -6px rgba(147,147,150,1);
+	box-shadow: 0 0 14px -6px rgba(147,147,150,1);
 	border-radius: 10px;
 }
 body{
@@ -21,8 +24,9 @@ body{
 }
 .header{
 	width: 100%;
-	height: 40px;
 	background-color: #3da08b;
+	z-index: 100;
+	position: sticky;
 }
 .row{
 	margin-right: -15px;
@@ -30,7 +34,7 @@ body{
 }
 .number{
 	color: #f0f8ff;
-	font-size: 14;
+	font-size: 14px;
 	float: left;
     display: block;
     text-align: right;
@@ -115,32 +119,95 @@ body{
 	height: 25px;
 }
 
+/*
 @media screen and (min-width : 283px) and (max-width: 499px) {
     .header{
         height: 80px;
     }
 }
+*/
 
 @media (min-width: 1200px){
 	.container {
     width: 1050px;
+
 	}
 }
+.container{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+.square{
+	width: 1050px;
+	min-height: 600px;
+	background-color: #414042;
+	display: none;
+}
+.mainMenu{
+	z-index: 99;
+	/*position: fixed;*/
+	display: block;
+	/*padding-top: 35px;*/
+	padding-left: 15px;
+
+}
+
+.menu-static-top{
+	position: absolute;
+}
+.menu-fixed-top{
+	position: fixed;
+	top: 0;
+}
+
+.closeMenu{
+	color: #fff;
+	font-size: 50px;
+	cursor: pointer;
+}
+.shortMenu p {
+	text-transform: uppercase;
+	color: #a3d39c;
+	font-size: 15px;
+	font-weight: bold;
+}
+.shortMenu ul{
+	list-style-type: none;
+	color: white;
+	padding-left: 0;
+	line-height: 2.5;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.shortMenu ul li:hover{
+	background-color: #a3d39c;
+	color: #414042;
+}
+.shortMenu ul br {
+	padding: 2px 0;
+}
+
 .navbar-static-top{
 	padding-left: 6px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	background-color: rgb(255, 255, 255);
+	background-color: #fff;
 }
 .navbar-fixed-top{
 	background-color: white;
 	width: 100%;
 	border-bottom: #e4e4e4 solid 1px;
 }
-.navbar-fixed-top .row {
+.navbar-fixed-top .row{
 	max-width: 1050px;
 	margin: 0px auto;
 	height: 55px;
+}
+.navbar-fixed-top .navimg{
+	padding-left: 0;
 }
 .navbox{
 	padding-right: 0px;
@@ -154,7 +221,8 @@ body{
 
 .upperlogo{
 	/*width: 100%;*/
-	padding-left: 7px;
+	max-width: 100%;
+	padding-left: 0;
 }
 .navdiv{
 	padding-left: 0px;
@@ -203,10 +271,15 @@ body{
 	height: 44px;
 	margin-left: -1px;
 }
+
+
+
+
 .containerrows{
-	max-width: 1008px;
 	margin: auto;
 }
+
+
 .grad1{
 	background: linear-gradient(#6edad6, #1dbcb5);
 	float: left;
@@ -275,24 +348,27 @@ p {
     .grad1, .grad2, .grad3{
         margin-bottom: 5px;
     }
+	.foot ul{
+		/*text-align: center;
+		list-style-position: inside;*/
+	}
 
 }
-* {box-sizing:border-box}
 
-/* Slideshow container */
+
+/*!* Slideshow container *!
 .slideshow-container {
-	max-width: 1008px;
 	margin: auto;
-	/*position: relative;
-	margin: auto;*/
+	!*position: relative;
+	margin: auto;*!
 }
 
-/* Hide the images by default */
+!* Hide the images by default *!
 .mySlides {
 	display: none;
 }
 
-/* Fading animation */
+!* Fading animation *!
 .fade {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 13.5s;
@@ -308,8 +384,35 @@ p {
 @keyframes fade {
 	from {opacity: .9}
 	to {opacity: 1}
+}*/
+.slider{
+	position: relative;
+}
+.controls{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: auto;
+	pointer-events: none;
+	z-index: 2;
+}
+.arrowleft, .arrowright{
+	position: absolute;
+	transform: translateY(-50%) scale(1);
+	transition: transform 0.1s ease-out;
 }
 
+.arrowleft:hover, .arrowright:hover{
+	transform: translateY(-50%) scale(1.1);
+}
+.arrowright{
+	right: 10px;
+	pointer-events: auto;
+}
+.arrowleft{
+	left: 10px;
+	pointer-events: auto;
+}
 .Services{
 	margin: auto;
     /* width: 100px; */
@@ -331,13 +434,25 @@ p {
 	}
 }
 
-@media screen and (min-width : 770px) and (max-width: 1200px){
+@media screen and (min-width : 768px) and (max-width: 1200px){
     .serviceone, .servicetwo,.servicethree{
         width: 295px;
        /*  height: 290px; */
         margin-top: 70px;
         margin-right: 17px;
     }
+	.containerrowsleft{
+		padding-right: 5px;
+	}
+
+	.containerrowsmiddle{
+		padding-left: 2.5px;
+		padding-right: 2.5px;
+	}
+
+	.containerrowsright{
+		padding-left: 5px;
+	}
 }
 /*
 @media screen and (min-width : 360px) and (max-width: 710px){
@@ -345,7 +460,9 @@ p {
         margin: 30px 60px;
     }
 }*/
-
+.serviceone{
+	margin-left: 20px;
+}
 .serviceone p{
     font-size: 25px;
 }
@@ -374,7 +491,7 @@ p {
     font-weight: 700;
     color: #0E4352;
 }
-@media screen and (min-width : 710px) and (max-width: 2400px){
+@media screen and (min-width : 992px) and (max-width: 2400px){
 	.serviceone, .servicetwo{
 		border-right: solid #6d7073 1px;
 	}
@@ -393,6 +510,9 @@ p {
     background: -o-linear-gradient(#de3e5d, #c82747);
     background: -moz-linear-gradient(#de3e5d, #c82747);
     background: linear-gradient(#de3e5d, #c82747);
+}
+.servicetwo{
+	padding-left: 0;
 }
 .servicetwo div p{
 	font-size: 25px;
@@ -590,7 +710,7 @@ vertical-align: top;
 
 .amerialogo{
 	position: absolute;
-    top: -95px;
+    top: -64px;
     left: 0;
 }
 
@@ -600,15 +720,15 @@ vertical-align: top;
 	width: 100%;
 }
 .foot{
-	/*position: relative;*/
-	top: 30px;
+	position: relative;
+	padding-top: 30px;
 }
 
 .firstlist ul, .secondlist ul, .thirdlist ul{
 	color: white;
 	list-style-type: none;
 	margin-left: -36px;
-	padding: 17px 20px 0px 10px;
+	padding: 17px 20px 0px 20px;
 	min-height: 322px;
 }
 .firstlist a, .secondlist a p, .thirdlist a, .fourthlist p{
@@ -642,31 +762,68 @@ vertical-align: top;
 .secondlist img{
 	width: 60px;
 	position: relative;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 } 
 h5{
-    font-size: 15px;    
+    font-size: 13px;
     margin-bottom: 33px;
     color: rgb(255, 255, 255);
 }
 .fourthlist{
 	padding-top: 17px;
 }
-.fourthlist ul .contacts{
-	list-style-image: url(../image/Contacts.png);
+/*.fourthlist ul .contacts{*/
+	/*list-style-image: url(../image/Contacts.png);*/
+/*}*/
+.fourthlist .contacts,
+.fourthlist .contactstel,
+.fourthlist .contactsmail {
+	position: relative;
+	list-style-type: none;
+	margin-bottom: 10px;
+
 }
-.fourthlist ul .contactstel{
-	list-style-image: url(../image/ContactsTel.png);
+.fourthlist .contactsmail {
+	padding-top: 5px;
 }
-.fourthlist ul .contactsmail{
-	list-style-image: url(../image/ContactsMail.png);
+.fourthlist .contacts:before,
+.fourthlist .contactstel:before,
+.fourthlist .contactsmail:before {
+	content: "";
+	position: absolute;
 }
+
+.fourthlist .contacts:before {
+	width: 35px;
+	height: 55px;
+	top: 8px;
+	left: -45px;
+	background: url(../image/Contacts.png) no-repeat;
+}
+.fourthlist .contactstel:before {
+	width: 35px;
+	height: 35px;
+	top: 20px;
+	left: -45px;
+	background: url(../image/ContactsTel.png) no-repeat;
+}
+.fourthlist .contactsmail:before {
+	width: 35px;
+	height: 35px;
+	top: 0;
+	left: -45px;
+	background: url(../image/ContactsMail.png) no-repeat;
+}
+
 .fourthlist ul:first-child{
 	list-style-type: none;
+
 }
 .fourthlist h5{
-	margin-bottom: 0px; 
+	margin-bottom: 25px;
+	position: relative;
+	left: -50px;
 }
 .socialicos div {
  background-color: #72bf44;
@@ -702,7 +859,7 @@ h5{
 
 .additional{
     margin-top: 20px;
-    padding-left: 0;
+    padding-left: 8px;
     margin-left: -4px;
     color: white;
     font-size: 12px;
@@ -715,7 +872,7 @@ h5{
 .copyright{
     margin-top: 20px;
     padding-left: 0;
-    margin-left: -4px;
+    margin-left: 5px;
     color: white;
     font-size: 10px;
 }
