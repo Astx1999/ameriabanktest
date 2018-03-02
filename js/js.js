@@ -30,13 +30,14 @@ function showSlides() {
     }
   });
 */
+$(document).ready(function(){
 var TopNav = $('.TopNav'),
     square = $('.square');
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if(scroll > 0){
-        console.log(546);
+
         TopNav.removeClass('navbar-static-top').addClass('navbar-fixed-top');
         square.removeClass('menu-static-top').addClass('menu-fixed-top');
     } else {
@@ -46,18 +47,12 @@ $(window).scroll(function () {
 });
 
 
-
-
 var uncheck = $(".uncheck");
 uncheck.click(function a(){
 	$(this).toggleClass("check");
 });
 
 
-
-
-
-$(document).ready(function(){
     var owl= $(".owl-carousel"),
         url = null,
         prev = $(".arrowleft"),
@@ -68,7 +63,7 @@ $(document).ready(function(){
         loop: true,
         items: 1,
         center: true,
-        touchDrag: true
+        touchDrag: true,
     });
 
     next.on("click", function(){
@@ -77,23 +72,50 @@ $(document).ready(function(){
     prev.on("click", function(){
             owl.trigger("prev.owl.carousel")
         });
-    });
+  
+
+
 
     var burgerBar = $(".burgerbar");
     var close = $(".closeMenu");
 
     burgerBar.click(function () {
         square.css('display', 'block');
+        square.addClass('fadeInDown');
         square.addClass('mainMenu');
         $('.TopNav').css('display', 'none');
     });
 
     close.click(function (){
         square.css('display', 'none');
+        square.removeClass('fadeInDown');
         square.removeClass('mainMenu');
         $('.TopNav').css('display', 'block');
     });
 
+    square.scroll(function (){
+        console.log('scrolling');
+    });
+
+//     square.focusout(function (){
+//         square.css('display', 'none');
+//     });
+//     // square.onfocusout = function(){myScript};
+
+    $(document).mouseup(function(e) {
+       
+        if (!square.is(e.target) && square.has(e.target).length === 0) 
+    {
+        square.css('display', 'none');
+        square.removeClass('fadeInDown');
+        square.removeClass('mainMenu');
+        $('.TopNav').css('display', 'block');
+
+    }
+        });
+
+
+      });
 
 
 
